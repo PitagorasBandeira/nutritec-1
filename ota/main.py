@@ -34,7 +34,7 @@ def reset_mac():
 def pub_sub():
     try:
         while True:
-            print("Listening v2 +++++++++++")
+            print("Listening v1")
             mqtt_client.reconnect()
             subscribe_topic = get_c2d_topic(survey_data['device_id'])
             mqtt_client.set_callback(callback_handler)
