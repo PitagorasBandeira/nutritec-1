@@ -1,0 +1,8 @@
+{
+    "pwd": "wrah3fAT", 
+    "device_id": "BITPLANT", 
+    "sas_token_str": "SharedAccessSignature sr=iot-bitsaas-prd-001.azure-devices.net%2Fdevices%2FBITPLANT&sig=H3DCTAwXlcaEE%2BGWWwZQHvbexwY%2BZK2G7NEWA%2BweAQs%3D&se=1671511593", 
+    "ssid": "BlueIoT", 
+    "hostname": "iot-bitsaas-prd-001.azure-devices.net", 
+    "username": ""
+}
