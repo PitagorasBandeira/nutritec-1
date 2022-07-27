@@ -51,7 +51,7 @@ try:
     if OTA.update():
         import machine
         print("Updated to the latest version! Rebooting...")
-        time.sleep(10)
+        sleep(10)
         reset()
 except Exception as e:
     print(e)
