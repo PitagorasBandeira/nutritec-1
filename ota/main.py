@@ -23,8 +23,8 @@ def callback_handler(topic, message_receive):
     #print(message_receive)
  
 def reset_mac():
-    print("Reiniciando a pedido")
-    reset()
+  print("Reiniciando a pedido")
+  reset()
   
 
 #collect from topic
@@ -32,7 +32,7 @@ def pub_sub():
     global datadataset_dec_rep_j
     try:
         while True:
-            print("Listening - ", str(localtime()))
+            print("Listening - v1", str(localtime()))
             mqtt_client.reconnect()
             subscribe_topic = get_c2d_topic(survey_data['device_id'])
             mqtt_client.set_callback(callback_handler)
@@ -56,6 +56,9 @@ def pub_sub():
                         mqtt_client.publish(topic=topic, msg=data)
                         sleep(30)
                         bomba1_off()
+                        data = sensor_get_values()
+                        topic = get_telemetry_topic(survey_data['device_id'])
+                        mqtt_client.publish(topic=topic, msg=data)                        
                     elif datadataset_dec_rep_j['act'] == 'bomba2_off': 
                         bomba2_off()
                         data = sensor_get_values()
@@ -68,6 +71,9 @@ def pub_sub():
                         mqtt_client.publish(topic=topic, msg=data)
                         sleep(30)
                         bomba2_off()
+                        data = sensor_get_values()
+                        topic = get_telemetry_topic(survey_data['device_id'])
+                        mqtt_client.publish(topic=topic, msg=data)                        
                     elif datadataset_dec_rep_j['act'] == "reset": reset_mac()
                     elif datadataset_dec_rep_j['act'] == 'fitaled_off': 
                         fitaled_off()
@@ -108,4 +114,5 @@ def pub_sub():
 
 while True:
     pub_sub()
+
 
