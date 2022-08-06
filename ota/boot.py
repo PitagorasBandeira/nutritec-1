@@ -44,7 +44,7 @@ if station.isconnected() == True:
 
 # Usamos o protocolo OTA para atualizar nosso sistema remotamente, basta redefinir os dados presentes abaixo e n閼肩幈 mexer nunca no senko.py
 from senko import Senko
-OTA = Senko(user="Badprofusion", repo="nutritec", working_dir="ota", files=["boot.py", "vars.json", "main.py", "util.py"])
+OTA = Senko(user="Badprofusion", repo="nutritec", working_dir="ota", files=["boot.py", "main.py", "util.py"])
 #OTA = Senko(user="rafaelbhcosta", repo="nutri_ota", working_dir="ota", files=["boot.py", "main.py"])
 
 try:
@@ -57,6 +57,3 @@ except Exception as e:
     print(e)
     print('Sem Att no momento')
     None
-
-
-
