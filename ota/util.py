@@ -188,7 +188,7 @@ def sensor_get_values():
   msgfull = {}
   msg["sensorname"] = "BITPLANT"
   msg["sensortype"] = "mixed sensors"
-  msg["version"] = " - v2"
+  msg["version"] = " * v2"
   msg["humid_limit"] = float(moisture2_value)
   #msg["humid"] = float(humid)
   #msg["temp"] = float(temp)
