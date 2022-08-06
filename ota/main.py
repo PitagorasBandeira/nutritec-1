@@ -32,7 +32,7 @@ def pub_sub():
     global datadataset_dec_rep_j
     try:
         while True:
-            print("Listening - v1", str(localtime()))
+            print("Listening ------------------ v1", str(localtime()))
             mqtt_client.reconnect()
             subscribe_topic = get_c2d_topic(survey_data['device_id'])
             mqtt_client.set_callback(callback_handler)
@@ -114,5 +114,3 @@ def pub_sub():
 
 while True:
     pub_sub()
-
-
