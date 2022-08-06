@@ -54,7 +54,7 @@ def pub_sub():
                         data = sensor_get_values()
                         topic = get_telemetry_topic(survey_data['device_id'])
                         mqtt_client.publish(topic=topic, msg=data)
-                        sleep(30)
+                        sleep(40)
                         bomba1_off()
                     elif datadataset_dec_rep_j['act'] == 'bomba2_off': 
                         bomba2_off()
@@ -66,7 +66,7 @@ def pub_sub():
                         data = sensor_get_values()
                         topic = get_telemetry_topic(survey_data['device_id'])
                         mqtt_client.publish(topic=topic, msg=data)
-                        sleep(30)
+                        sleep(40)
                         bomba2_off()
                     elif datadataset_dec_rep_j['act'] == "reset": reset_mac()
                     elif datadataset_dec_rep_j['act'] == 'fitaled_off': 
