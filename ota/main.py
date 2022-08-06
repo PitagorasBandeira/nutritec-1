@@ -23,8 +23,8 @@ def callback_handler(topic, message_receive):
     #print(message_receive)
  
 def reset_mac():
-  print("Reiniciando a pedido")
-  reset()
+    print("Reiniciando a pedido")
+    reset()
   
 
 #collect from topic
@@ -107,5 +107,5 @@ def pub_sub():
 
 
 while True:
-  pub_sub()
+    pub_sub()
 
